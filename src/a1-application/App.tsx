@@ -1,16 +1,19 @@
 import React from 'react';
 import './App.css';
 import {Header} from './b1-header/Header';
-import {Navigation} from './b2-navigation/Navigation';
+import {BodyWithRoutes} from './b2-body-with-routes/BodyWithRoutes';
 import {Footer} from './b3-footer/Footer';
+import {BrowserRouter} from 'react-router-dom';
 
 function App() {
     return (
+        <BrowserRouter>
         <div className="App">
             <Header/>
-            <Navigation/>
+            <BodyWithRoutes/>
             <Footer/>
         </div>
+        </BrowserRouter>
     );
 }
 

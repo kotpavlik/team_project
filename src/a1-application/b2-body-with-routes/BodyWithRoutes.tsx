@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './Navigations.module.scss'
+import style from './BodyWithRoutes.module.scss'
 import {Route, Routes} from 'react-router-dom';
 import {Login} from './main/p1-login/Login';
 import {Registration} from './main/p2-registration/Registration';
@@ -8,11 +8,11 @@ import {PasswordRecovery} from './main/p4-password-recovery/PasswordRecovery';
 import {NewPassword} from './main/p5-new-password/NewPassword';
 import {Error404} from './main/p6-error-404/Error-404';
 
- export const Navigation = React.memo(() => {
+ export const BodyWithRoutes = React.memo(() => {
     return (
         <nav className={style.navigations_wrapper}>
             <Routes>
-                <Route path={'/'} element={<Login/>}/>
+                <Route path={'/login'} element={<Login/>}/>
                 <Route path={'/registration'} element={<Registration/>}/>
                 <Route path={'/profile'} element={<Profile/>}/>
                 <Route path={'/password-recovery'} element={<PasswordRecovery/>}/>
